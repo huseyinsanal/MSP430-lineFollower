@@ -23,7 +23,7 @@ void main(void)
     TACTL = TASSEL_2|MC_1;   //SMCLK submain clock,upmode
 
     while (1){
-        sensorout = P1IN & 0x18; // sensor sends high voltage on dark surface
+        sensorout = P1IN & 0x18; //P1.3 P1.4 sensors sends high voltage on dark surface
         if (sensorout == 0x18)
             straight();
         else if (sensorout == 0x08)
@@ -36,7 +36,7 @@ void main(void)
 }
 void straight(void){
     P2OUT = 0x00;
-    P2OUT |= 0x24;
+    P2OUT |= 0x24;  //P2.2 P2.5 motors forward poles high voltage
 }
 void turnright(void){
     P2OUT = 0x00;
