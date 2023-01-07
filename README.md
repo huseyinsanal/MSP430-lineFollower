@@ -1,2 +1,3 @@
 # MSP430-Microcontroller
-Line Follower Robotic Car with MSP430 G2553 
+MSP430 G2553 rev 1.5
+
